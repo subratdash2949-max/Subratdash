@@ -1,96 +1,481 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#101014">
-  <meta name="description" content="Subrat Dash — AI photo editing, AI photoshoots and creative advertisement design.">
-  <title>Subrat Dash | AI Creative Studio</title>
-  <style>
-    :root{--bg:#101014;--panel:#191920;--text:#f7f5f2;--muted:#aaa7b2;--accent:#c7ff5e;--line:#2d2c35}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Arial,sans-serif;line-height:1.6}
-    a{color:inherit;text-decoration:none}.wrap{width:min(1120px,90%);margin:auto}
-    header{position:sticky;top:0;z-index:5;background:#101014eF;backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-    nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-weight:900;letter-spacing:1px}.brand span{color:var(--accent)}
-    .navlinks{display:flex;gap:25px;color:var(--muted);font-size:14px}.navlinks a:hover{color:var(--accent)}
-    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 19px;border-radius:999px;background:var(--accent);color:#111;font-weight:800;border:0}
-    .btn.outline{background:transparent;color:var(--text);border:1px solid #555}
-    .hero{padding:100px 0 82px;display:grid;grid-template-columns:1.15fr .85fr;gap:55px;align-items:center}
-    .eyebrow{color:var(--accent);font-size:12px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase}
-    h1{font-size:clamp(42px,6vw,76px);line-height:1.04;letter-spacing:-3px;margin:18px 0}
-    h1 em{font-style:normal;color:var(--accent)}.lead{max-width:570px;color:var(--muted);font-size:18px}
-    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
-    .visual{min-height:410px;border:1px solid #454052;border-radius:28px;overflow:hidden;position:relative;background:#17131f;box-shadow:0 24px 70px #0008,0 0 45px #b77bff22}
-    .visual img{display:block;width:100%;height:100%;min-height:410px;object-fit:cover;object-position:center;border-radius:28px}
-    .visual-tag{position:absolute;left:18px;bottom:18px;padding:9px 14px;border:1px solid #ffffff35;border-radius:999px;background:#101014b8;color:#fff;font-size:12px;letter-spacing:1px;backdrop-filter:blur(10px)}
-    .hero-copy{position:relative}.hero-copy:after{content:"✦  CREATIVE • AI • VISUALS";display:block;margin-top:24px;color:#c7ff5e;font-size:11px;font-weight:800;letter-spacing:2px}
-    .hero .eyebrow{display:inline-block;padding:8px 12px;border:1px solid #c7ff5e55;border-radius:999px;background:#c7ff5e12}
-    .hero h1 em{text-shadow:0 0 28px #c7ff5e35}
-    section{padding:76px 0}.section-head{max-width:650px;margin-bottom:30px}.section-head h2{font-size:clamp(30px,4vw,46px);line-height:1.1;margin:10px 0}.section-head p{color:var(--muted)}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.service,.price,.contact-card{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:25px}
-    .num{color:var(--accent);font-size:13px;font-weight:800;letter-spacing:1px}.service h3{margin:13px 0 8px}.service p,.price p{color:var(--muted);margin:0}
-    .portfolio{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.work{min-height:230px;border-radius:18px;padding:18px;display:flex;align-items:end;border:1px solid #ffffff1c;overflow:hidden;position:relative}
-    .work:nth-child(1){background:linear-gradient(145deg,#e5a77d,#5c304d 55%,#17131d)}.work:nth-child(2){background:linear-gradient(145deg,#9eb4c7,#293b56 55%,#10151f)}.work:nth-child(3){background:linear-gradient(145deg,#f0ce87,#a54d43 55%,#25151d)}
-    .work span{font-weight:800;text-shadow:0 2px 12px #000}
-    .price{display:flex;flex-direction:column;gap:14px}.price h3{margin:0;font-size:22px}.price .btn{margin-top:auto;align-self:flex-start}
-    .contact{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:stretch}.contact-card h3{font-size:25px;margin-top:0}.contact-card p{color:var(--muted)}
-    footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-size:13px}
-    .smallnote{font-size:12px;color:var(--muted);margin-top:14px}
-    @media(max-width:760px){.navlinks{display:none}.hero{grid-template-columns:1fr;padding:65px 0 45px;gap:30px}.visual{min-height:300px}.grid,.portfolio{grid-template-columns:1fr 1fr}.contact{grid-template-columns:1fr}}
-    @media(max-width:480px){.grid,.portfolio{grid-template-columns:1fr}.work{min-height:190px}section{padding:55px 0}nav{height:64px}}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#111111">
+<meta name="description" content="Subrat Dash — Premium AI Photography, Photo Editing and Advertisement Creative Studio.">
+<title>Subrat Dash | Creative Studio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+ --bg:#111110;
+ --surface:#1a1917;
+ --white:#f5f1e9;
+ --muted:#aaa59b;
+ --gold:#c7a875;
+ --line:#34312c;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+ background:var(--bg);
+ color:var(--white);
+ font-family:'DM Sans',sans-serif;
+ line-height:1.7;
+}
+a{text-decoration:none;color:inherit}
+img{width:100%;display:block}
+.container{width:min(1180px,90%);margin:auto}
+
+/* NAVIGATION */
+header{
+ position:sticky;top:0;z-index:100;
+ background:#111110ed;
+ backdrop-filter:blur(15px);
+ border-bottom:1px solid var(--line);
+}
+nav{
+ min-height:78px;
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+}
+.logo{font-size:21px;font-weight:700;letter-spacing:2px}
+.logo span{color:var(--gold)}
+.nav-links{display:flex;gap:30px;color:var(--muted);font-size:13px}
+.nav-links a:hover{color:var(--gold)}
+.nav-button{
+ border:1px solid var(--gold);
+ padding:9px 19px;
+ font-size:12px;
+ letter-spacing:1px;
+ transition:.3s;
+}
+.nav-button:hover{background:var(--gold);color:#111}
+
+/* HERO */
+.hero{
+ min-height:650px;
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ align-items:center;
+ gap:65px;
+ padding:80px 0;
+}
+.kicker{
+ color:var(--gold);
+ font-size:11px;
+ letter-spacing:3px;
+ font-weight:700;
+ text-transform:uppercase;
+}
+.hero h1{
+ font-family:'Playfair Display',serif;
+ font-size:clamp(48px,6vw,78px);
+ font-weight:500;
+ line-height:1.12;
+ margin:23px 0;
+ letter-spacing:-1.5px;
+}
+.hero h1 span{color:var(--gold);font-style:italic}
+.hero p{color:var(--muted);max-width:480px;font-size:15px}
+.hero-actions{display:flex;gap:15px;margin-top:32px;flex-wrap:wrap}
+.btn{
+ display:inline-block;
+ padding:13px 24px;
+ background:var(--gold);
+ color:#171511;
+ font-size:12px;
+ font-weight:700;
+ letter-spacing:1px;
+ transition:.3s;
+}
+.btn:hover{background:#e1c99f;transform:translateY(-3px)}
+.btn-secondary{
+ background:transparent;
+ color:var(--white);
+ border:1px solid #777;
+}
+.btn-secondary:hover{background:var(--white);color:#111}
+.hero-image{
+ height:490px;
+ position:relative;
+ overflow:hidden;
+ background:#25221e;
+}
+.hero-image img{height:100%;object-fit:cover;object-position:center}
+.image-caption{
+ position:absolute;bottom:20px;left:20px;
+ background:#111111c9;padding:10px 16px;
+ font-size:10px;letter-spacing:2px;
+}
+
+/* GENERAL */
+section{padding:100px 0}
+.section-label{
+ color:var(--gold);
+ font-size:11px;
+ letter-spacing:3px;
+ text-transform:uppercase;
+}
+.section-title{
+ font-family:'Playfair Display',serif;
+ font-size:clamp(34px,4vw,52px);
+ font-weight:500;
+ line-height:1.2;
+ margin:15px 0;
+}
+.section-desc{color:var(--muted);max-width:600px;font-size:14px}
+.section-heading{margin-bottom:45px}
+
+/* ABOUT */
+.about-grid{
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ gap:70px;
+ align-items:center;
+}
+.about-box{
+ border-left:2px solid var(--gold);
+ padding:15px 25px;
+}
+.about-box p{color:var(--muted);font-size:15px;margin-bottom:18px}
+.stats{display:flex;gap:35px;margin-top:30px}
+.stat strong{display:block;color:var(--gold);font-size:27px}
+.stat span{font-size:11px;color:var(--muted)}
+
+/* SERVICES */
+.services-grid{
+ display:grid;
+ grid-template-columns:repeat(3,1fr);
+ gap:16px;
+}
+.service{
+ padding:30px 25px;
+ background:var(--surface);
+ border:1px solid var(--line);
+ min-height:230px;
+ transition:.3s;
+}
+.service:hover{
+ border-color:var(--gold);
+ transform:translateY(-5px);
+}
+.service-number{color:var(--gold);font-size:12px;letter-spacing:2px}
+.service h3{font-family:'Playfair Display',serif;font-size:24px;margin:25px 0 10px}
+.service p{color:var(--muted);font-size:13px}
+
+/* PORTFOLIO */
+.portfolio-grid{
+ display:grid;
+ grid-template-columns:repeat(2,1fr);
+ gap:22px;
+}
+.portfolio-item{position:relative;overflow:hidden;background:#24211d}
+.portfolio-item img{
+ height:350px;
+ object-fit:cover;
+ transition:transform .7s;
+}
+.portfolio-item:hover img{transform:scale(1.06)}
+.portfolio-caption{padding:15px 0}
+.portfolio-caption h3{
+ font-family:'Playfair Display',serif;
+ font-size:22px;font-weight:500;
+}
+.portfolio-caption p{color:var(--muted);font-size:11px;letter-spacing:1px}
+
+/* PROCESS */
+.process-grid{
+ display:grid;
+ grid-template-columns:repeat(4,1fr);
+ gap:20px;
+}
+.process-card{border-top:1px solid var(--gold);padding-top:20px}
+.process-card span{color:var(--gold);font-size:12px}
+.process-card h3{font-family:'Playfair Display',serif;font-size:20px;margin:13px 0}
+.process-card p{color:var(--muted);font-size:13px}
+
+/* PRICING */
+.pricing-grid{
+ display:grid;
+ grid-template-columns:repeat(3,1fr);
+ gap:18px;
+}
+.price-card{
+ padding:30px;
+ background:var(--surface);
+ border:1px solid var(--line);
+ display:flex;
+ flex-direction:column;
+ min-height:260px;
+}
+.price-card h3{font-family:'Playfair Display',serif;font-size:25px}
+.price-card p{color:var(--muted);font-size:13px;margin:15px 0 25px}
+.price-card .btn{align-self:flex-start;margin-top:auto}
+
+/* CONTACT */
+.contact-section{
+ background:#1b1915;
+ border:1px solid var(--line);
+ padding:65px 35px;
+ text-align:center;
+}
+.contact-section .section-desc{margin:0 auto}
+.contact-section .btn{margin-top:28px}
+.social-links{display:flex;justify-content:center;gap:25px;margin-top:30px;color:var(--muted);font-size:12px}
+.social-links a:hover{color:var(--gold)}
+
+footer{
+ border-top:1px solid var(--line);
+ padding:30px 0;
+ color:var(--muted);
+ font-size:12px;
+}
+.footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+
+/* MOBILE */
+@media(max-width:800px){
+ .nav-links{display:none}
+ .hero{grid-template-columns:1fr;gap:35px;padding:65px 0}
+ .hero-image{height:400px}
+ .about-grid{grid-template-columns:1fr;gap:30px}
+ .services-grid{grid-template-columns:1fr 1fr}
+ .process-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:520px){
+ section{padding:70px 0}
+ .hero h1{font-size:49px}
+ .hero-image{height:340px}
+ .services-grid,.portfolio-grid,.pricing-grid{grid-template-columns:1fr}
+ .portfolio-item img{height:300px}
+ .stats{gap:20px}
+ .contact-section{padding:45px 20px}
+ .footer-inner{flex-direction:column}
+}
+</style>
 </head>
+
 <body>
-<header><div class="wrap"><nav>
-  <a class="brand" href="#home">SUBRAT<span>.</span></a>
-  <div class="navlinks"><a href="#services">Services</a><a href="#portfolio">Portfolio</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a></div>
-  <a class="btn" href="#contact">Let's Talk</a>
-</nav></div></header>
+
+<header>
+ <div class="container">
+  <nav>
+   <a class="logo" href="#home">SUBRAT<span>.</span></a>
+   <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#contact">Contact</a>
+   </div>
+   <a class="nav-button" href="#contact">LET'S TALK ↗</a>
+  </nav>
+ </div>
+</header>
+
 <main>
-  <div class="wrap hero" id="home">
-    <div class="hero-copy">
-      <div class="eyebrow">AI Photo & Ad Creative Services</div>
-      <h1>I'm <em>Subrat Dash.</em><br>Let's create something unforgettable.</h1>
-      <p class="lead">I create eye-catching AI photos, creative edits and advertisement visuals that help people and brands stand out.</p>
-      <div class="actions"><a class="btn" href="#contact">Get a Quote</a><a class="btn outline" href="#portfolio">View Work</a></div>
-    </div>
-    <div class="visual"><img src="subrat-animation.gif" alt="3D cartoon-style Subrat Dash working creatively at a computer in his AI studio"><div class="visual-tag">● LIVE CREATIVE MODE</div></div>
+
+<!-- HERO -->
+<section class="container hero" id="home">
+ <div>
+  <div class="kicker">Independent AI Creative Studio</div>
+  <h1>Creating Visuals.<br><span>Crafting Emotions.</span></h1>
+  <p>
+   I'm Subrat Dash, a creative photographer and AI visual designer.
+   I transform ordinary ideas into extraordinary visual experiences.
+  </p>
+  <div class="hero-actions">
+   <a class="btn" href="#portfolio">EXPLORE MY WORK ↗</a>
+   <a class="btn btn-secondary" href="#contact">LET'S CONNECT</a>
   </div>
+ </div>
+ <div class="hero-image">
+  <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1100&q=85" alt="Creative photography and visual production">
+  <div class="image-caption">SUBRAT DASH · CREATIVE VISUALS</div>
+ </div>
+</section>
 
-  <section id="services"><div class="wrap">
-    <div class="section-head"><div class="eyebrow">What I do</div><h2>Creative services for your next big idea.</h2><p>From a single profile picture to a complete ad creative, let's make your vision look its best.</p></div>
-    <div class="grid">
-      <article class="service"><div class="num">01 / AI PHOTOS</div><h3>AI Photo Creation</h3><p>Creative AI portraits, stylish concepts and profile images.</p></article>
-      <article class="service"><div class="num">02 / PHOTO EDITING</div><h3>AI Photo Editing</h3><p>Background changes, retouching, enhancement and aesthetic edits.</p></article>
-      <article class="service"><div class="num">03 / AD CREATIVES</div><h3>AI Advertisement Design</h3><p>Scroll-stopping promotional visuals for products, services and social media.</p></article>
-    </div>
-  </div></section>
+<!-- ABOUT -->
+<section id="about">
+ <div class="container about-grid">
+  <div>
+   <div class="section-label">01 — About Me</div>
+   <h2 class="section-title">Art meets imagination.</h2>
+   <p class="section-desc">
+    My creative journey is about turning imagination into beautiful visuals.
+    I combine photography, modern editing and AI-powered creativity
+    to create unique digital experiences.
+   </p>
+  </div>
+  <div class="about-box">
+   <p>
+    I work with individuals, creators and businesses to create
+    attractive photographs, portraits and advertisement creatives.
+    Every project deserves attention to detail and a unique visual identity.
+   </p>
+   <div class="stats">
+    <div class="stat"><strong>AI</strong><span>Creative Visuals</span></div>
+    <div class="stat"><strong>PHOTO</strong><span>Editing & Design</span></div>
+    <div class="stat"><strong>AD</strong><span>Creative Campaigns</span></div>
+   </div>
+  </div>
+ </div>
+</section>
 
-  <section id="portfolio"><div class="wrap">
-    <div class="section-head"><div class="eyebrow">Selected work</div><h2>Creative work speaks louder.</h2><p>Replace these sample tiles with your own AI photos and advertisement designs.</p></div>
-    <div class="portfolio">
-      <div class="work"><span>AI Portrait Concept</span></div><div class="work"><span>Creative Photo Edit</span></div><div class="work"><span>Ad Campaign Visual</span></div>
-    </div>
-  </div></section>
+<!-- SERVICES -->
+<section id="services">
+ <div class="container">
+  <div class="section-heading">
+   <div class="section-label">02 — Services</div>
+   <h2 class="section-title">What I create.</h2>
+   <p class="section-desc">Creative solutions designed to make your personality and brand stand out.</p>
+  </div>
+  <div class="services-grid">
+   <article class="service">
+    <span class="service-number">01 / AI PORTRAITS</span>
+    <h3>AI Photo Creation</h3>
+    <p>Unique AI portraits, stylish concepts, professional profile pictures and creative photoshoots.</p>
+   </article>
+   <article class="service">
+    <span class="service-number">02 / PHOTO ART</span>
+    <h3>Photo Editing</h3>
+    <p>Professional retouching, colour grading, background replacement and aesthetic enhancement.</p>
+   </article>
+   <article class="service">
+    <span class="service-number">03 / BRAND VISUALS</span>
+    <h3>AI Advertisement</h3>
+    <p>Premium promotional designs, product advertisements and social media creatives.</p>
+   </article>
+   <article class="service">
+    <span class="service-number">04 / CREATIVE DESIGN</span>
+    <h3>Poster Design</h3>
+    <p>Eye-catching promotional posters, event designs and campaign artwork.</p>
+   </article>
+   <article class="service">
+    <span class="service-number">05 / SOCIAL MEDIA</span>
+    <h3>Social Media Creatives</h3>
+    <p>Creative posts, banners and visual content for Instagram and other platforms.</p>
+   </article>
+   <article class="service">
+    <span class="service-number">06 / CUSTOM PROJECTS</span>
+    <h3>Creative Concepts</h3>
+    <p>Have a different idea? Let's discuss a custom visual concept for your project.</p>
+   </article>
+  </div>
+ </div>
+</section>
 
-  <section id="pricing"><div class="wrap">
-    <div class="section-head"><div class="eyebrow">Simple process</div><h2>Tell me what you have in mind.</h2><p>Every project is different. Share your requirements and I'll provide a quote before starting.</p></div>
-    <div class="grid">
-      <article class="price"><h3>Single Creative</h3><p>One AI photo or edited creative.</p><a class="btn outline" href="#contact">Ask for Price</a></article>
-      <article class="price"><h3>Social Media Pack</h3><p>A set of visuals for your profile, page or campaign.</p><a class="btn outline" href="#contact">Ask for Price</a></article>
-      <article class="price"><h3>Custom Ad Design</h3><p>Promotional creative tailored to your brand or product.</p><a class="btn outline" href="#contact">Ask for Price</a></article>
-    </div>
-  </div></section>
+<!-- PORTFOLIO -->
+<section id="portfolio">
+ <div class="container">
+  <div class="section-heading">
+   <div class="section-label">03 — Selected Work</div>
+   <h2 class="section-title">A collection of creativity.</h2>
+   <p class="section-desc">A glimpse into the visual world of Subrat Dash. Replace sample images with your own completed projects.</p>
+  </div>
+  <div class="portfolio-grid">
+   <article class="portfolio-item">
+    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=900&q=85" alt="Portrait photography concept">
+    <div class="portfolio-caption"><h3>Portrait Stories</h3><p>PORTRAIT · CREATIVE PHOTOGRAPHY</p></div>
+   </article>
+   <article class="portfolio-item">
+    <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=900&q=85" alt="Fashion campaign concept">
+    <div class="portfolio-caption"><h3>Fashion Visuals</h3><p>FASHION · BRAND CAMPAIGN</p></div>
+   </article>
+   <article class="portfolio-item">
+    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=85" alt="Product advertisement concept">
+    <div class="portfolio-caption"><h3>Product Campaign</h3><p>PRODUCT · ADVERTISEMENT</p></div>
+   </article>
+   <article class="portfolio-item">
+    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=85" alt="Wedding photography concept">
+    <div class="portfolio-caption"><h3>Wedding Moments</h3><p>WEDDING · VISUAL STORYTELLING</p></div>
+   </article>
+  </div>
+ </div>
+</section>
 
-  <section id="contact"><div class="wrap contact">
-    <div class="section-head"><div class="eyebrow">Get in touch</div><h2>Have an idea? Let's make it real.</h2><p>Send your requirements, reference images and deadline. I'll get back to you with the next steps.</p></div>
-    <div class="contact-card"><h3>Subrat Dash</h3><p>AI Photo Editor · AI Ad Creative Designer</p>
-      <a class="btn" href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener">Contact on WhatsApp</a>
-      <p class="smallnote">Before publishing, replace the sample WhatsApp number in this button with your number (country code + number, digits only).</p>
-    </div>
-  </div></section>
+<!-- PROCESS -->
+<section id="process">
+ <div class="container">
+  <div class="section-heading">
+   <div class="section-label">04 — My Process</div>
+   <h2 class="section-title">Simple. Creative. Personal.</h2>
+  </div>
+  <div class="process-grid">
+   <article class="process-card"><span>STEP 01</span><h3>Share Your Idea</h3><p>Tell me what you want to create and share references.</p></article>
+   <article class="process-card"><span>STEP 02</span><h3>Creative Direction</h3><p>We discuss the style, concept and project details.</p></article>
+   <article class="process-card"><span>STEP 03</span><h3>Design & Create</h3><p>I create your visual and refine the details.</p></article>
+   <article class="process-card"><span>STEP 04</span><h3>Final Delivery</h3><p>Your completed creative is delivered digitally.</p></article>
+  </div>
+ </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+ <div class="container">
+  <div class="section-heading">
+   <div class="section-label">05 — Packages</div>
+   <h2 class="section-title">Let's plan your project.</h2>
+   <p class="section-desc">Every creative requirement is different. Choose a service and request a personalised quote.</p>
+  </div>
+  <div class="pricing-grid">
+   <article class="price-card">
+    <h3>Single Creative</h3>
+    <p>One AI portrait, photo edit or promotional design.</p>
+    <a class="btn" href="#contact">GET A QUOTE ↗</a>
+   </article>
+   <article class="price-card">
+    <h3>Creative Bundle</h3>
+    <p>Multiple visuals for your personal profile or social media.</p>
+    <a class="btn" href="#contact">GET A QUOTE ↗</a>
+   </article>
+   <article class="price-card">
+    <h3>Brand Campaign</h3>
+    <p>Custom advertisement and promotional visuals for businesses.</p>
+    <a class="btn" href="#contact">GET A QUOTE ↗</a>
+   </article>
+  </div>
+ </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+ <div class="container">
+  <div class="contact-section">
+   <div class="section-label">06 — Contact</div>
+   <h2 class="section-title">Have a vision?<br>Let's create it.</h2>
+   <p class="section-desc">
+    Tell me about your project, your ideas and the visuals you need.
+    Let's create something worth remembering.
+   </p>
+   <a class="btn" href="https://wa.me/91XXXXXXXXXX" target="_blank" rel="noopener">START A PROJECT ↗</a>
+   <div class="social-links">
+    <a href="https://instagram.com/" target="_blank" rel="noopener">INSTAGRAM ↗</a>
+    <a href="mailto:your-email@example.com">EMAIL ↗</a>
+   </div>
+   <p style="color:var(--muted);font-size:11px;margin-top:25px">Replace sample contact details with your own before publishing.</p>
+  </div>
+ </div>
+</section>
+
 </main>
-<footer><div class="wrap">© <span id="year"></span> Subrat Dash · AI Creative Studio. All rights reserved.</div></footer>
-<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+
+<footer>
+ <div class="container footer-inner">
+  <span>© <span id="year"></span> SUBRAT DASH. ALL RIGHTS RESERVED.</span>
+  <span>AI CREATIVE STUDIO · PHOTOGRAPHY · VISUAL DESIGN</span>
+ </div>
+</footer>
+
+<script>
+ document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
